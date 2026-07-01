@@ -28,7 +28,7 @@ User Prompt
     ▼
 ┌─────────────────────────────────┐
 │ Stage 2: Algorithm — Scoring    │  Hard filters + weighted composite
-│ (Our Code, lib/scoring.js)      │  score across all 20 cars in dataset
+│ (Our Code, lib/scoring.js)      │  score across all cars in dataset
 └─────────────────────────────────┘
     │
     ▼
@@ -53,7 +53,7 @@ Each follow-up message benefits from two layers of context:
 | Cut Feature | Reason |
 |---|---|
 | **User authentication / accounts** | No time. Session-based shortlisting via browser cookies is sufficient to demo persistence. |
-| **Real car database / API** | The dataset is a curated, representative 20-car JSON file. A real integration (CarGurus API, Edmunds) would add auth, rate limits, and complexity that distracts from the core pipeline. |
+| **Real car database / API** | The dataset is a curated, representative car JSON file. A real integration (CarGurus API, Edmunds) would add auth, rate limits, and complexity that distracts from the core pipeline. |
 | **Image assets for cars** | Adds scope. Placeholder spec cards communicate the same information. |
 | **Price trends / depreciation data** | Out of brief scope. The brief asked for specs, mileage, safety, reviews — not market data. |
 | **Mobile-responsive layout** | Deferred. The UI is desktop-first and usable on mobile but not optimized. |
@@ -99,7 +99,7 @@ Each follow-up message benefits from two layers of context:
 
 1. **Speed on boilerplate**: Setup, file creation, and first-draft CSS that would have taken 30–45 minutes took 2–3 minutes.
 2. **Debugging known patterns**: The Next.js 15 `cookies()` async breaking change is a known issue. The AI caught it immediately and fixed all call sites in one pass.
-3. **Dataset generation**: Getting 20 realistic, varied car records with consistent schema structure was instant vs. manually researching and typing specs.
+3. **Dataset generation**: Getting realistic, varied car records with consistent schema structure was instant vs. manually researching and typing specs.
 4. **CSS iteration**: Rapid changes to layout and animation without looking up syntax.
 
 ## Where Did They Get in the Way?
@@ -124,7 +124,7 @@ Each follow-up message benefits from two layers of context:
 
 ## Screen Recording
 
-> 🎥 **[Link to be added before submission]**
+> 🎥 **[Google Drive Link](https://drive.google.com/file/d/10X7573f0gVQBg2WKvdCw02m1_Gs9STjN/view?usp=sharing)**
 
 ---
 
@@ -154,7 +154,7 @@ Open `http://localhost:3000`. That's it. No Docker. No database setup.
 
 ```env
 GEMINI_API_KEY=your_api_key_here   # Required — get free at aistudio.google.com
-GEMINI_MODEL=gemini-1.5-pro        # Optional — defaults to gemini-1.5-pro
+GEMINI_MODEL=gemini-3.5-flash        # Optional — defaults to gemini-3.5-flash
 ```
 
 ---
