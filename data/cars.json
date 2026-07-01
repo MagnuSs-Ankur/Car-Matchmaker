@@ -1,0 +1,661 @@
+[
+  {
+    "_id": "car_1",
+    "make": "Toyota",
+    "model": "RAV4",
+    "variant": "XLE AWD 2024",
+    "price": 34000,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 203,
+      "torque": 184,
+      "engineCC": 2500,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Android Auto",
+        "Apple CarPlay",
+        "Sunroof",
+        "Lane Assist"
+      ]
+    },
+    "mileage": 30,
+    "safetyRating": 4.8,
+    "userReviews": {
+      "averageScore": 4.5,
+      "totalReviews": 320,
+      "highlights": [
+        "Great reliability",
+        "Spacious interior",
+        "Fuel efficient"
+      ]
+    }
+  },
+  {
+    "_id": "car_2",
+    "make": "Honda",
+    "model": "CR-V",
+    "variant": "Hybrid Sport 2024",
+    "price": 35500,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 204,
+      "torque": 247,
+      "engineCC": 2000,
+      "fuelType": "Hybrid",
+      "transmission": "CVT",
+      "features": [
+        "AWD",
+        "Heated Seats",
+        "Apple CarPlay",
+        "Adaptive Cruise Control"
+      ]
+    },
+    "mileage": 37,
+    "safetyRating": 4.9,
+    "userReviews": {
+      "averageScore": 4.7,
+      "totalReviews": 280,
+      "highlights": [
+        "Excellent mpg",
+        "Smooth ride",
+        "Quiet cabin"
+      ]
+    }
+  },
+  {
+    "_id": "car_3",
+    "make": "Ford",
+    "model": "Mustang",
+    "variant": "GT Premium 2024",
+    "price": 48000,
+    "specs": {
+      "bodyType": "Coupe",
+      "seating": 4,
+      "horsepower": 480,
+      "torque": 415,
+      "engineCC": 5000,
+      "fuelType": "Petrol",
+      "transmission": "Manual",
+      "features": [
+        "RWD",
+        "Leather Seats",
+        "Track Apps",
+        "Premium Audio"
+      ]
+    },
+    "mileage": 18,
+    "safetyRating": 4.2,
+    "userReviews": {
+      "averageScore": 4.6,
+      "totalReviews": 150,
+      "highlights": [
+        "Incredible power",
+        "Classic styling",
+        "Fun to drive"
+      ]
+    }
+  },
+  {
+    "_id": "car_4",
+    "make": "Tesla",
+    "model": "Model 3",
+    "variant": "Long Range 2024",
+    "price": 47000,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 393,
+      "torque": 376,
+      "engineCC": 0,
+      "fuelType": "Electric",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Autopilot",
+        "Glass Roof",
+        "Premium Audio"
+      ]
+    },
+    "mileage": 130,
+    "safetyRating": 5,
+    "userReviews": {
+      "averageScore": 4.8,
+      "totalReviews": 500,
+      "highlights": [
+        "Insane acceleration",
+        "No gas bills",
+        "Great tech"
+      ]
+    }
+  },
+  {
+    "_id": "car_5",
+    "make": "Kia",
+    "model": "Telluride",
+    "variant": "SX Prestige 2024",
+    "price": 51000,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 7,
+      "horsepower": 291,
+      "torque": 262,
+      "engineCC": 3800,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "3rd Row Seating",
+        "Heated/Ventilated Seats",
+        "Head-Up Display"
+      ]
+    },
+    "mileage": 21,
+    "safetyRating": 4.7,
+    "userReviews": {
+      "averageScore": 4.9,
+      "totalReviews": 410,
+      "highlights": [
+        "Luxurious feel",
+        "Tons of space",
+        "Great value"
+      ]
+    }
+  },
+  {
+    "_id": "car_6",
+    "make": "Toyota",
+    "model": "Sienna",
+    "variant": "XSE Hybrid 2024",
+    "price": 44000,
+    "specs": {
+      "bodyType": "Minivan",
+      "seating": 7,
+      "horsepower": 245,
+      "torque": 175,
+      "engineCC": 2500,
+      "fuelType": "Hybrid",
+      "transmission": "CVT",
+      "features": [
+        "FWD",
+        "Sliding Doors",
+        "Rear Entertainment System",
+        "Apple CarPlay"
+      ]
+    },
+    "mileage": 36,
+    "safetyRating": 4.8,
+    "userReviews": {
+      "averageScore": 4.6,
+      "totalReviews": 210,
+      "highlights": [
+        "Ultimate family car",
+        "Hybrid efficiency",
+        "Comfortable"
+      ]
+    }
+  },
+  {
+    "_id": "car_7",
+    "make": "Subaru",
+    "model": "Outback",
+    "variant": "Wilderness 2024",
+    "price": 40000,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 260,
+      "torque": 277,
+      "engineCC": 2400,
+      "fuelType": "Petrol",
+      "transmission": "CVT",
+      "features": [
+        "AWD",
+        "High Ground Clearance",
+        "Roof Rails",
+        "Water-Repellent Seats"
+      ]
+    },
+    "mileage": 24,
+    "safetyRating": 4.9,
+    "userReviews": {
+      "averageScore": 4.7,
+      "totalReviews": 185,
+      "highlights": [
+        "Off-road capable",
+        "Very safe",
+        "Practical"
+      ]
+    }
+  },
+  {
+    "_id": "car_8",
+    "make": "Honda",
+    "model": "Civic",
+    "variant": "EX 2024",
+    "price": 27000,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 180,
+      "torque": 177,
+      "engineCC": 1500,
+      "fuelType": "Petrol",
+      "transmission": "CVT",
+      "features": [
+        "FWD",
+        "Sunroof",
+        "Blind Spot Monitor",
+        "Apple CarPlay"
+      ]
+    },
+    "mileage": 36,
+    "safetyRating": 4.8,
+    "userReviews": {
+      "averageScore": 4.5,
+      "totalReviews": 450,
+      "highlights": [
+        "Reliable daily driver",
+        "Good mpg",
+        "Sporty handling"
+      ]
+    }
+  },
+  {
+    "_id": "car_9",
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "variant": "LT Trail Boss 2024",
+    "price": 58000,
+    "specs": {
+      "bodyType": "Truck",
+      "seating": 5,
+      "horsepower": 355,
+      "torque": 383,
+      "engineCC": 5300,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "4WD",
+        "Lift Kit",
+        "Off-Road Tires",
+        "Towing Package"
+      ]
+    },
+    "mileage": 16,
+    "safetyRating": 4.3,
+    "userReviews": {
+      "averageScore": 4.4,
+      "totalReviews": 310,
+      "highlights": [
+        "Looks tough",
+        "Pulls a trailer easily",
+        "Roomy cab"
+      ]
+    }
+  },
+  {
+    "_id": "car_10",
+    "make": "BMW",
+    "model": "3 Series",
+    "variant": "330i 2024",
+    "price": 45000,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 255,
+      "torque": 295,
+      "engineCC": 2000,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "RWD",
+        "Leather Seats",
+        "Navigation",
+        "Premium Audio"
+      ]
+    },
+    "mileage": 29,
+    "safetyRating": 4.9,
+    "userReviews": {
+      "averageScore": 4.6,
+      "totalReviews": 220,
+      "highlights": [
+        "Fun to drive",
+        "Premium interior",
+        "Quick acceleration"
+      ]
+    }
+  },
+  {
+    "_id": "car_11",
+    "make": "Nissan",
+    "model": "Versa",
+    "variant": "S 2024",
+    "price": 16130,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 122,
+      "torque": 114,
+      "engineCC": 1600,
+      "fuelType": "Petrol",
+      "transmission": "Manual",
+      "features": [
+        "FWD",
+        "Bluetooth",
+        "Automatic Emergency Braking"
+      ]
+    },
+    "mileage": 35,
+    "safetyRating": 4.5,
+    "userReviews": {
+      "averageScore": 4.2,
+      "totalReviews": 115,
+      "highlights": [
+        "Very affordable",
+        "Great gas mileage",
+        "Basic but reliable"
+      ]
+    }
+  },
+  {
+    "_id": "car_12",
+    "make": "Hyundai",
+    "model": "Elantra",
+    "variant": "SE 2024",
+    "price": 21625,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 147,
+      "torque": 132,
+      "engineCC": 2000,
+      "fuelType": "Petrol",
+      "transmission": "CVT",
+      "features": [
+        "FWD",
+        "Apple CarPlay",
+        "Lane Keeping Assist",
+        "Blind Spot Detection"
+      ]
+    },
+    "mileage": 36,
+    "safetyRating": 4.6,
+    "userReviews": {
+      "averageScore": 4.5,
+      "totalReviews": 210,
+      "highlights": [
+        "Excellent value",
+        "Stylish exterior",
+        "Good standard tech"
+      ]
+    }
+  },
+  {
+    "_id": "car_13",
+    "make": "Porsche",
+    "model": "Macan",
+    "variant": "S 2024",
+    "price": 72300,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 375,
+      "torque": 383,
+      "engineCC": 2900,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Leather Interior",
+        "Sport Chrono Package",
+        "Premium Audio"
+      ]
+    },
+    "mileage": 19,
+    "safetyRating": 4.8,
+    "userReviews": {
+      "averageScore": 4.9,
+      "totalReviews": 85,
+      "highlights": [
+        "Sports car handling",
+        "Luxurious interior",
+        "Incredible performance"
+      ]
+    }
+  },
+  {
+    "_id": "car_14",
+    "make": "Mercedes-Benz",
+    "model": "S-Class",
+    "variant": "S580 4MATIC 2024",
+    "price": 117300,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 496,
+      "torque": 516,
+      "engineCC": 4000,
+      "fuelType": "Hybrid",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Massaging Seats",
+        "AR Head-Up Display",
+        "Burmester 3D Audio"
+      ]
+    },
+    "mileage": 21,
+    "safetyRating": 5,
+    "userReviews": {
+      "averageScore": 4.9,
+      "totalReviews": 45,
+      "highlights": [
+        "Ultimate luxury",
+        "Incredibly quiet",
+        "Cutting-edge tech"
+      ]
+    }
+  },
+  {
+    "_id": "car_15",
+    "make": "Chevrolet",
+    "model": "Trax",
+    "variant": "LS 2024",
+    "price": 20400,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 137,
+      "torque": 162,
+      "engineCC": 1200,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "FWD",
+        "Wireless Apple CarPlay",
+        "Active Noise Cancellation"
+      ]
+    },
+    "mileage": 30,
+    "safetyRating": 4.4,
+    "userReviews": {
+      "averageScore": 4.3,
+      "totalReviews": 130,
+      "highlights": [
+        "Surprisingly roomy",
+        "Sharp styling",
+        "Great price for an SUV"
+      ]
+    }
+  },
+  {
+    "_id": "car_16",
+    "make": "Rivian",
+    "model": "R1T",
+    "variant": "Adventure Dual-Motor 2024",
+    "price": 73000,
+    "specs": {
+      "bodyType": "Truck",
+      "seating": 5,
+      "horsepower": 533,
+      "torque": 610,
+      "engineCC": 0,
+      "fuelType": "Electric",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Air Suspension",
+        "Gear Tunnel",
+        "Vegan Leather"
+      ]
+    },
+    "mileage": 80,
+    "safetyRating": 5,
+    "userReviews": {
+      "averageScore": 4.8,
+      "totalReviews": 210,
+      "highlights": [
+        "Incredible off-road",
+        "Fast acceleration",
+        "Innovative storage"
+      ]
+    }
+  },
+  {
+    "_id": "car_17",
+    "make": "Toyota",
+    "model": "Corolla",
+    "variant": "LE 2024",
+    "price": 22050,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 169,
+      "torque": 151,
+      "engineCC": 2000,
+      "fuelType": "Petrol",
+      "transmission": "CVT",
+      "features": [
+        "FWD",
+        "Toyota Safety Sense",
+        "Apple CarPlay",
+        "Automatic Climate Control"
+      ]
+    },
+    "mileage": 35,
+    "safetyRating": 4.9,
+    "userReviews": {
+      "averageScore": 4.7,
+      "totalReviews": 500,
+      "highlights": [
+        "Legendary reliability",
+        "Easy to drive",
+        "Low maintenance costs"
+      ]
+    }
+  },
+  {
+    "_id": "car_18",
+    "make": "Land Rover",
+    "model": "Range Rover",
+    "variant": "Autobiography 2024",
+    "price": 141100,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 5,
+      "horsepower": 523,
+      "torque": 553,
+      "engineCC": 4400,
+      "fuelType": "Petrol",
+      "transmission": "Automatic",
+      "features": [
+        "4WD",
+        "Executive Class Rear Seats",
+        "Meridian Signature Sound",
+        "Air Suspension"
+      ]
+    },
+    "mileage": 18,
+    "safetyRating": 4.6,
+    "userReviews": {
+      "averageScore": 4.5,
+      "totalReviews": 30,
+      "highlights": [
+        "Opulent interior",
+        "Commanding view",
+        "Smooth ride"
+      ]
+    }
+  },
+  {
+    "_id": "car_19",
+    "make": "Kia",
+    "model": "Forte",
+    "variant": "LXS 2024",
+    "price": 20290,
+    "specs": {
+      "bodyType": "Sedan",
+      "seating": 5,
+      "horsepower": 147,
+      "torque": 132,
+      "engineCC": 2000,
+      "fuelType": "Petrol",
+      "transmission": "CVT",
+      "features": [
+        "FWD",
+        "Forward Collision Warning",
+        "8-inch Touchscreen",
+        "Alloy Wheels"
+      ]
+    },
+    "mileage": 32,
+    "safetyRating": 4.4,
+    "userReviews": {
+      "averageScore": 4.3,
+      "totalReviews": 180,
+      "highlights": [
+        "Great warranty",
+        "Good fuel economy",
+        "Sporty looks"
+      ]
+    }
+  },
+  {
+    "_id": "car_20",
+    "make": "BMW",
+    "model": "X7",
+    "variant": "xDrive40i 2024",
+    "price": 81900,
+    "specs": {
+      "bodyType": "SUV",
+      "seating": 7,
+      "horsepower": 375,
+      "torque": 398,
+      "engineCC": 3000,
+      "fuelType": "Hybrid",
+      "transmission": "Automatic",
+      "features": [
+        "AWD",
+        "Panoramic Sky Lounge",
+        "Heated Front Seats",
+        "Curved Display"
+      ]
+    },
+    "mileage": 22,
+    "safetyRating": 4.8,
+    "userReviews": {
+      "averageScore": 4.7,
+      "totalReviews": 120,
+      "highlights": [
+        "Spacious for 7",
+        "Powerful engine",
+        "Top tier technology"
+      ]
+    }
+  }
+]
