@@ -178,9 +178,7 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ carId })
       });
-      const data = await res.json();
       if (res.ok) {
-        document.cookie = `sessionId=${data.sessionId}; path=/; max-age=86400`;
         setSavedIds(prev => new Set(prev).add(carId));
       }
     } catch (err) {

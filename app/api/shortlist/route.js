@@ -1,74 +1,63 @@
 import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
-import fs from 'fs';
 import path from 'path';
+import fs from 'fs';
 
-async function getSessionId() {
+const SHORTLIST_COOKIE = 'car_shortlist';
+const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
+
+/**
+ * Reads the shortlisted car IDs from the request cookie.
+ */
+async function getShortlistedIds() {
   const cookieStore = await cookies();
-  let sessionId = cookieStore.get('sessionId')?.value;
-  if (!sessionId) {
-    sessionId = Math.random().toString(36).substring(2, 15); 
-  }
-  return sessionId;
-}
-
-const dataPath = path.join(process.cwd(), 'data', 'shortlists.json');
-const carsDataPath = path.join(process.cwd(), 'data', 'cars.json');
-
-function getShortlists() {
+  const raw = cookieStore.get(SHORTLIST_COOKIE)?.value;
+  if (!raw) return [];
   try {
-    if (fs.existsSync(dataPath)) {
-      return JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    }
-  } catch (e) {
-    console.error(e);
+    return JSON.parse(decodeURIComponent(raw));
+  } catch {
+    return [];
   }
-  return {};
 }
 
-function saveShortlists(data) {
-  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2), 'utf8');
-}
-
-export async function GET(req) {
+export async function GET() {
   try {
-    const sessionId = await getSessionId();
-    const shortlists = getShortlists();
-    const userCarIds = shortlists[sessionId] || [];
+    const ids = await getShortlistedIds();
 
-    // Hydrate cars
-    const allCars = JSON.parse(fs.readFileSync(carsDataPath, 'utf8'));
-    const cars = allCars.filter(c => userCarIds.includes(c._id));
+    // Hydrate car objects from the dataset
+    const dataPath = path.join(process.cwd(), 'data', 'cars.json');
+    const allCars = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    const cars = allCars.filter(c => ids.includes(c._id));
 
-    return NextResponse.json({ cars, sessionId });
+    return NextResponse.json({ cars });
   } catch (error) {
-    console.error("Shortlist GET Error:", error);
+    console.error('Shortlist GET Error:', error);
     return NextResponse.json({ error: 'Failed to fetch shortlist' }, { status: 500 });
   }
 }
 
 export async function POST(req) {
   try {
-    const { carId, sessionId: reqSessionId } = await req.json();
-    const sessionId = reqSessionId || await getSessionId();
-
+    const { carId } = await req.json();
     if (!carId) {
       return NextResponse.json({ error: 'carId is required' }, { status: 400 });
     }
 
-    const shortlists = getShortlists();
-    if (!shortlists[sessionId]) {
-      shortlists[sessionId] = [];
+    const ids = await getShortlistedIds();
+    if (!ids.includes(carId)) {
+      ids.push(carId);
     }
 
-    if (!shortlists[sessionId].includes(carId)) {
-      shortlists[sessionId].push(carId);
-      saveShortlists(shortlists);
-    }
-
-    return NextResponse.json({ success: true, sessionId });
+    const res = NextResponse.json({ success: true });
+    res.cookies.set(SHORTLIST_COOKIE, encodeURIComponent(JSON.stringify(ids)), {
+      maxAge: MAX_AGE,
+      path: '/',
+      httpOnly: true,
+      sameSite: 'lax',
+    });
+    return res;
   } catch (error) {
-    console.error("Shortlist POST Error:", error);
+    console.error('Shortlist POST Error:', error);
     return NextResponse.json({ error: 'Failed to save to shortlist' }, { status: 500 });
   }
 }
@@ -77,21 +66,23 @@ export async function DELETE(req) {
   try {
     const { searchParams } = new URL(req.url);
     const carId = searchParams.get('carId');
-    const sessionId = searchParams.get('sessionId') || await getSessionId();
-
     if (!carId) {
       return NextResponse.json({ error: 'carId is required' }, { status: 400 });
     }
 
-    const shortlists = getShortlists();
-    if (shortlists[sessionId]) {
-      shortlists[sessionId] = shortlists[sessionId].filter(id => id !== carId);
-      saveShortlists(shortlists);
-    }
+    const ids = await getShortlistedIds();
+    const updated = ids.filter(id => id !== carId);
 
-    return NextResponse.json({ success: true });
+    const res = NextResponse.json({ success: true });
+    res.cookies.set(SHORTLIST_COOKIE, encodeURIComponent(JSON.stringify(updated)), {
+      maxAge: MAX_AGE,
+      path: '/',
+      httpOnly: true,
+      sameSite: 'lax',
+    });
+    return res;
   } catch (error) {
-    console.error("Shortlist DELETE Error:", error);
+    console.error('Shortlist DELETE Error:', error);
     return NextResponse.json({ error: 'Failed to remove from shortlist' }, { status: 500 });
   }
 }

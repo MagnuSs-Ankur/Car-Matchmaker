@@ -2,6 +2,8 @@
 
 > **Go from "I don't know what to buy" to "I'm confident about my shortlist" in under a minute.**
 
+🌐 **Live Demo: [car-matchmaker-lemon.vercel.app](https://car-matchmaker-lemon.vercel.app)**
+
 ---
 
 ## What Did I Build, and Why?
@@ -68,7 +70,7 @@ Each follow-up message benefits from two layers of context:
 |---|---|---|
 | **Framework** | Next.js 15 (App Router) | Server Components by default, API routes co-located, zero config — ideal for full-stack POC in a time-box. |
 | **AI** | Google Gemini (`gemini-1.5-pro` / configurable via `GEMINI_MODEL` env) | Strong JSON-mode support, generous free tier, fast response times for structured output. |
-| **Database** | Local JSON files (`data/cars.json`, `data/shortlists.json`) | Zero setup for the tester. Demonstrates real persistence (file is written on every save/delete) without requiring any infrastructure. |
+| **Database** | `data/cars.json` (read) + browser cookies (shortlist write) | `cars.json` is read-only so it works on Vercel's serverless filesystem. Shortlists are persisted in a secure `httpOnly` cookie — zero infra required. |
 | **Styling** | Vanilla CSS (CSS Modules) | Maximum control. No framework lock-in. Scoped modules prevent style leakage. |
 | **Fonts** | System font stack | Zero network overhead. Ships immediately. |
 
@@ -141,7 +143,7 @@ cd car-matchmaker
 npm install
 
 # 3. Configure environment
-cp .env.local.example .env.local
+cp .env.example .env.local
 # Open .env.local and add your GEMINI_API_KEY
 
 # 4. Run
